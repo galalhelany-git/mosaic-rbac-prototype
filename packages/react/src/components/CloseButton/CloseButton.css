@@ -1,0 +1,46 @@
+@layer mosaic.components {
+  .mosaic-close-button {
+    align-items: center;
+    appearance: none;
+    background: var(--mosaic-color-neutral-background-off-white);
+    border: 0;
+    border-radius: var(--mosaic-measurement-abstract-8);
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .mosaic-close-button[aria-pressed='true'] {
+    background: var(--mosaic-color-status-error);
+    color: var(--mosaic-color-neutral-background-white);
+  }
+
+  .mosaic-close-button:focus-visible {
+    background: var(--mosaic-color-neutral-background-white);
+    box-shadow: var(--mosaic-elevation-focus-error);
+    outline: none;
+  }
+
+  .mosaic-close-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+  .mosaic-close-button--lg {
+    block-size: 42px;
+    inline-size: 42px;
+  }
+  .mosaic-close-button--md {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+  .mosaic-close-button--sm {
+    block-size: 20px;
+    inline-size: 20px;
+  }
+  .mosaic-close-button svg {
+    block-size: 58%;
+    inline-size: 58%;
+  }
+}

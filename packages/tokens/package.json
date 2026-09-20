@@ -1,0 +1,34 @@
+{
+  "name": "@mosaic-ds/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Audited Mosaic design tokens and generated platform outputs.",
+  "type": "module",
+  "files": [
+    "dist",
+    "generated"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./tokens.css": "./generated/tokens.css",
+    "./tokens.json": "./generated/tokens.json",
+    "./figma.snapshot.json": "./src/figma.snapshot.json"
+  },
+  "scripts": {
+    "generate": "tsx scripts/generate.ts",
+    "build": "pnpm generate && tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.2",
+    "tsx": "4.23.13",
+    "tsup": "8.3.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11"
+  }
+}

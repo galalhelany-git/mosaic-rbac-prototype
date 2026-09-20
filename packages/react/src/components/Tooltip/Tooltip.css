@@ -1,0 +1,70 @@
+@layer mosaic.components {
+  .mosaic-tooltip {
+    display: inline-flex;
+    position: relative;
+  }
+  .mosaic-tooltip__content {
+    background: var(--mosaic-color-secondary-500);
+    border: 1px solid var(--mosaic-color-primary-50);
+    border-radius: 6px;
+    box-shadow: var(--mosaic-elevation-depth4);
+    color: var(--mosaic-color-primary-500);
+    font-family: var(--mosaic-typography-caption-font-family);
+    font-size: var(--mosaic-typography-caption-font-size);
+    line-height: var(--mosaic-typography-caption-line-height);
+    max-inline-size: min(240px, calc(100vw - var(--mosaic-spacing-32)));
+    padding: 6px var(--mosaic-spacing-12);
+    position: absolute;
+    white-space: normal;
+    z-index: 10;
+  }
+  .mosaic-tooltip__content::after {
+    background: inherit;
+    block-size: 8px;
+    border-block-end: 1px solid var(--mosaic-color-primary-50);
+    border-inline-end: 1px solid var(--mosaic-color-primary-50);
+    content: '';
+    inline-size: 8px;
+    position: absolute;
+  }
+  .mosaic-tooltip--top .mosaic-tooltip__content {
+    bottom: calc(100% + var(--mosaic-spacing-8));
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+  }
+  .mosaic-tooltip--top .mosaic-tooltip__content::after {
+    bottom: -5px;
+    inset-inline-start: calc(50% - 4px);
+    transform: rotate(45deg);
+  }
+  .mosaic-tooltip--bottom .mosaic-tooltip__content {
+    inset-inline-start: 50%;
+    top: calc(100% + var(--mosaic-spacing-8));
+    transform: translateX(-50%);
+  }
+  .mosaic-tooltip--bottom .mosaic-tooltip__content::after {
+    inset-inline-start: calc(50% - 4px);
+    top: -5px;
+    transform: rotate(225deg);
+  }
+  .mosaic-tooltip--left .mosaic-tooltip__content {
+    inset-inline-end: calc(100% + var(--mosaic-spacing-8));
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .mosaic-tooltip--left .mosaic-tooltip__content::after {
+    inset-inline-end: -5px;
+    top: calc(50% - 4px);
+    transform: rotate(-45deg);
+  }
+  .mosaic-tooltip--right .mosaic-tooltip__content {
+    inset-inline-start: calc(100% + var(--mosaic-spacing-8));
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .mosaic-tooltip--right .mosaic-tooltip__content::after {
+    inset-inline-start: -5px;
+    top: calc(50% - 4px);
+    transform: rotate(135deg);
+  }
+}

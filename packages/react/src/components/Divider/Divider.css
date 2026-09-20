@@ -1,0 +1,54 @@
+@layer mosaic.components {
+  .mosaic-divider {
+    border-color: var(--mosaic-color-primary-50);
+    border-style: solid;
+    flex: 0 0 auto;
+  }
+  .mosaic-divider--horizontal {
+    border-width: var(--mosaic-divider-weight) 0 0;
+    inline-size: 100%;
+  }
+  .mosaic-divider--vertical {
+    align-self: stretch;
+    border-width: 0 0 0 var(--mosaic-divider-weight);
+    min-block-size: 128px;
+  }
+  [dir='rtl'] .mosaic-divider--vertical {
+    border-width: 0 var(--mosaic-divider-weight) 0 0;
+  }
+  .mosaic-divider--sm {
+    --mosaic-divider-weight: 0.25px;
+  }
+  .mosaic-divider--md {
+    --mosaic-divider-weight: 0.5px;
+  }
+  .mosaic-divider--lg {
+    --mosaic-divider-weight: 1px;
+  }
+  .mosaic-divider--hg {
+    --mosaic-divider-weight: 2px;
+  }
+  .mosaic-divider--dashed {
+    border-style: dashed;
+  }
+  .mosaic-divider--labelled {
+    align-items: center;
+    border: 0;
+    display: flex;
+    gap: var(--mosaic-spacing-8);
+  }
+  .mosaic-divider__line {
+    border-block-start: var(--mosaic-divider-weight) solid var(--mosaic-color-primary-50);
+    flex: 1 1 auto;
+  }
+  .mosaic-divider--dashed .mosaic-divider__line {
+    border-block-start-style: dashed;
+  }
+  .mosaic-divider__label {
+    color: var(--mosaic-color-neutral-text-secondary);
+    font-family: var(--mosaic-typography-caption-font-family);
+    font-size: var(--mosaic-typography-caption-font-size);
+    font-weight: var(--mosaic-typography-caption-font-weight);
+    line-height: var(--mosaic-typography-caption-line-height);
+  }
+}

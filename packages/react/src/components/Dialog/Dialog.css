@@ -1,0 +1,97 @@
+@layer mosaic.components {
+  .mosaic-dialog {
+    background: var(--mosaic-color-neutral-background-off-white);
+    border: 0;
+    border-radius: var(--mosaic-measurement-abstract-8);
+    box-shadow: var(--mosaic-elevation-depth64);
+    color: var(--mosaic-color-neutral-text-primary);
+    inline-size: min(calc(100% - 32px), 500px);
+    max-block-size: calc(100dvh - 32px);
+    padding: 0;
+    position: relative;
+  }
+  .mosaic-dialog::backdrop {
+    background: rgb(17 32 76 / 0.45);
+  }
+  .mosaic-dialog--full {
+    block-size: calc(100dvh - 32px);
+    inline-size: calc(100% - 32px);
+    max-inline-size: none;
+  }
+  .mosaic-dialog__header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-inline-end: 56px !important;
+  }
+  .mosaic-dialog__header--center {
+    align-items: center;
+    text-align: center;
+  }
+  .mosaic-dialog__title {
+    color: var(--mosaic-color-primary-500);
+    font-family: var(--mosaic-typography-h3-font-family);
+    font-weight: 500;
+  }
+  .mosaic-dialog__header--lg .mosaic-dialog__title {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .mosaic-dialog__header--md .mosaic-dialog__title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .mosaic-dialog__header--sm .mosaic-dialog__title {
+    font-size: var(--mosaic-typography-body-base-font-size);
+    line-height: var(--mosaic-typography-body-base-line-height);
+  }
+  .mosaic-dialog__description {
+    color: var(--mosaic-color-neutral-text-secondary);
+    font-size: var(--mosaic-typography-body-base-font-size);
+    font-weight: 300;
+  }
+  .mosaic-dialog__body {
+    padding: 0 var(--mosaic-spacing-24) var(--mosaic-spacing-24);
+  }
+  .mosaic-dialog__footer {
+    align-items: center;
+    display: flex;
+    gap: var(--mosaic-spacing-8);
+  }
+  .mosaic-dialog__footer--start {
+    justify-content: flex-start;
+  }
+  .mosaic-dialog__footer--end {
+    justify-content: flex-end;
+  }
+  .mosaic-dialog__footer--split {
+    justify-content: space-between;
+  }
+  .mosaic-dialog__footer--full > * {
+    flex: 1;
+  }
+  .mosaic-dialog__close {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: var(--mosaic-measurement-abstract-8);
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    display: flex;
+    inset-block-start: var(--mosaic-spacing-16);
+    inset-inline-end: var(--mosaic-spacing-16);
+    justify-content: center;
+    padding: var(--mosaic-spacing-8);
+    position: absolute;
+    z-index: 1;
+  }
+  .mosaic-dialog__close:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-dialog__close svg {
+    block-size: var(--mosaic-spacing-24);
+    inline-size: var(--mosaic-spacing-24);
+  }
+}

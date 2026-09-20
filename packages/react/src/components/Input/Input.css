@@ -1,0 +1,149 @@
+@layer mosaic.components {
+  .mosaic-field {
+    display: grid;
+    gap: var(--mosaic-spacing-8);
+    inline-size: min(100%, 384px);
+  }
+
+  .mosaic-field__label-row {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--mosaic-spacing-8);
+    justify-content: space-between;
+  }
+
+  .mosaic-field__label {
+    color: var(--mosaic-color-neutral-text-primary);
+    font-family: var(--mosaic-typography-button-font-family);
+    font-size: var(--mosaic-typography-button-font-size);
+    font-weight: var(--mosaic-typography-button-font-weight);
+    letter-spacing: var(--mosaic-typography-button-letter-spacing);
+    line-height: var(--mosaic-typography-button-line-height);
+  }
+
+  .mosaic-field__counter,
+  .mosaic-field__help,
+  .mosaic-field__error {
+    font-family: var(--mosaic-typography-input-font-family);
+    font-size: var(--mosaic-typography-input-font-size);
+    font-weight: var(--mosaic-typography-input-font-weight);
+    letter-spacing: var(--mosaic-typography-input-letter-spacing);
+    line-height: var(--mosaic-typography-input-line-height);
+  }
+
+  .mosaic-field__counter {
+    color: var(--mosaic-color-neutral-text-primary);
+  }
+
+  .mosaic-field__control-column {
+    display: grid;
+    gap: var(--mosaic-spacing-8);
+    min-inline-size: 0;
+  }
+
+  .mosaic-field__control-row {
+    align-items: stretch;
+    display: flex;
+    gap: var(--mosaic-spacing-8);
+    min-inline-size: 0;
+  }
+
+  .mosaic-input__field {
+    align-items: center;
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-primary-50);
+    border-radius: var(--mosaic-measurement-abstract-8);
+    display: flex;
+    flex: 1 1 auto;
+    gap: var(--mosaic-spacing-4);
+    min-block-size: var(--mosaic-spacing-40);
+    min-inline-size: 0;
+    overflow: hidden;
+    padding-inline: var(--mosaic-spacing-12);
+  }
+
+  .mosaic-input__field:focus-within {
+    box-shadow: var(--mosaic-elevation-focus);
+  }
+
+  .mosaic-field--invalid .mosaic-input__field:focus-within {
+    box-shadow: var(--mosaic-elevation-focus-error);
+  }
+
+  .mosaic-input__control {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--mosaic-color-neutral-text-primary);
+    flex: 1 1 auto;
+    font-family: var(--mosaic-typography-input-font-family);
+    font-size: var(--mosaic-typography-input-font-size);
+    font-weight: var(--mosaic-typography-input-font-weight);
+    inline-size: 100%;
+    letter-spacing: var(--mosaic-typography-input-letter-spacing);
+    line-height: var(--mosaic-typography-input-line-height);
+    min-inline-size: 0;
+    outline: none;
+    padding-block: 10px;
+    padding-inline: 0;
+    text-overflow: ellipsis;
+  }
+
+  .mosaic-input__control::placeholder {
+    color: var(--mosaic-color-primary-200);
+    opacity: 1;
+  }
+
+  .mosaic-input__control[type='file']::file-selector-button {
+    background: transparent;
+    border: 0;
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    font: inherit;
+    margin-inline-end: var(--mosaic-spacing-4);
+    padding: 0;
+  }
+
+  .mosaic-field__icon {
+    align-items: center;
+    block-size: 20px;
+    display: inline-flex;
+    flex: 0 0 20px;
+    inline-size: 20px;
+    justify-content: center;
+  }
+
+  .mosaic-field__icon > * {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+
+  .mosaic-field__action {
+    flex: 0 0 auto;
+  }
+
+  .mosaic-field__help {
+    color: var(--mosaic-color-secondary-500);
+  }
+
+  .mosaic-field__error,
+  .mosaic-field--invalid .mosaic-field__label {
+    color: var(--mosaic-color-status-error);
+  }
+
+  .mosaic-field--disabled {
+    opacity: 0.4;
+  }
+
+  .mosaic-field--horizontal {
+    align-items: start;
+    grid-template-columns: auto minmax(0, 1fr);
+    inline-size: min(100%, 338px);
+  }
+
+  .mosaic-field--horizontal .mosaic-field__label-row {
+    align-items: center;
+    justify-content: center;
+    min-block-size: var(--mosaic-spacing-40);
+  }
+}

@@ -1,0 +1,37 @@
+@layer mosaic.components {
+  .mosaic-role-badge {
+    align-items: center;
+    background: var(--mosaic-color-neutral-background-white);
+    box-shadow: var(--mosaic-elevation-depth4);
+    display: inline-flex;
+    justify-content: center;
+  }
+  .mosaic-role-badge--32 {
+    border-radius: var(--mosaic-spacing-4);
+    padding: var(--mosaic-spacing-4);
+  }
+  .mosaic-role-badge--16 {
+    border-radius: 2px;
+    padding: 2px;
+  }
+  .mosaic-role-badge--32 img {
+    block-size: var(--mosaic-spacing-24);
+    inline-size: var(--mosaic-spacing-24);
+  }
+  .mosaic-role-badge--16 img {
+    block-size: var(--mosaic-spacing-12);
+    inline-size: var(--mosaic-spacing-12);
+  }
+  .mosaic-role-badge-cell {
+    align-items: center;
+    background: var(--mosaic-color-neutral-background-white);
+    border-radius: 3px;
+    box-shadow: var(--mosaic-elevation-depth4);
+    color: var(--mosaic-color-primary-500);
+    display: inline-flex;
+    font-size: var(--mosaic-typography-body-base-font-size);
+    gap: 7.5px;
+    line-height: var(--mosaic-typography-body-base-line-height);
+    padding: 3px;
+  }
+}

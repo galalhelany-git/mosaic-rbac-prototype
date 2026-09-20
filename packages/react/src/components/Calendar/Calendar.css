@@ -1,0 +1,123 @@
+@layer mosaic.components {
+  .mosaic-calendar {
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-primary-50);
+    border-radius: 6px;
+    color: var(--mosaic-color-primary-500);
+    display: inline-flex;
+    font-family: var(--mosaic-typography-body-base-font-family);
+    max-inline-size: 100%;
+    overflow-x: auto;
+    padding: var(--mosaic-spacing-12);
+  }
+  .mosaic-calendar__main {
+    inline-size: 252px;
+  }
+  .mosaic-calendar__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: var(--mosaic-spacing-8);
+  }
+  .mosaic-calendar__header strong {
+    font-size: var(--mosaic-typography-body-base-font-size);
+    font-weight: 500;
+  }
+  .mosaic-calendar__header button {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+  }
+  .mosaic-calendar__header svg {
+    block-size: var(--mosaic-spacing-16);
+    inline-size: var(--mosaic-spacing-16);
+  }
+  .mosaic-calendar__weekdays,
+  .mosaic-calendar__week {
+    display: grid;
+    grid-template-columns: repeat(7, 36px);
+  }
+  .mosaic-calendar__grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .mosaic-calendar__weekdays span {
+    align-items: center;
+    block-size: 32px;
+    color: var(--mosaic-color-neutral-text-secondary);
+    display: flex;
+    font-size: var(--mosaic-typography-caption-font-size);
+    justify-content: center;
+  }
+  .mosaic-calendar__day {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    block-size: 36px;
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    font-size: var(--mosaic-typography-caption-font-size);
+    inline-size: 36px;
+    padding: 0;
+  }
+  .mosaic-calendar__day:hover:not(:disabled) {
+    background: var(--mosaic-color-secondary-50);
+    border-radius: 6px;
+  }
+  .mosaic-calendar__day:focus-visible,
+  .mosaic-calendar__header button:focus-visible,
+  .mosaic-calendar__presets button:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+    position: relative;
+    z-index: 1;
+  }
+  .mosaic-calendar__day--outside {
+    color: var(--mosaic-color-primary-100);
+  }
+  .mosaic-calendar__day--range {
+    background: var(--mosaic-color-secondary-50);
+  }
+  .mosaic-calendar__day--selected {
+    background: var(--mosaic-color-primary-500);
+    border-radius: 6px;
+    color: var(--mosaic-color-neutral-background-off-white);
+  }
+  .mosaic-calendar__day:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+  }
+  .mosaic-calendar__presets {
+    border-inline-start: 1px solid var(--mosaic-color-primary-50);
+    display: flex;
+    flex-direction: column;
+    gap: var(--mosaic-spacing-4);
+    margin-inline-start: var(--mosaic-spacing-12);
+    padding-inline-start: var(--mosaic-spacing-12);
+  }
+  .mosaic-calendar__presets button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    font-size: var(--mosaic-typography-caption-font-size);
+    padding: var(--mosaic-spacing-8) var(--mosaic-spacing-12);
+    text-align: start;
+    white-space: nowrap;
+  }
+  .mosaic-calendar__presets button:hover {
+    background: var(--mosaic-color-secondary-50);
+  }
+  :where([dir='rtl']) .mosaic-calendar__header button svg {
+    transform: scaleX(-1);
+  }
+}

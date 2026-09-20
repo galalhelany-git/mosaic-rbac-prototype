@@ -1,0 +1,75 @@
+@layer mosaic.components {
+  .mosaic-time-picker {
+    display: inline-block;
+    inline-size: min(180px, 100%);
+    max-inline-size: 100%;
+    position: relative;
+  }
+  .mosaic-time-picker__trigger {
+    align-items: center;
+    appearance: none;
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-neutral-border);
+    border-radius: var(--mosaic-measurement-abstract-8);
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    display: flex;
+    inline-size: 100%;
+    justify-content: space-between;
+    min-block-size: var(--mosaic-spacing-48);
+    padding: 10px var(--mosaic-spacing-12);
+  }
+  .mosaic-time-picker__trigger svg {
+    block-size: var(--mosaic-spacing-24);
+    inline-size: var(--mosaic-spacing-24);
+  }
+  .mosaic-time-picker__trigger:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-time-picker__trigger:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+  .mosaic-time-picker__placeholder {
+    color: var(--mosaic-color-neutral-text-secondary);
+  }
+  .mosaic-time-picker__list {
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-primary-50);
+    border-radius: 6px;
+    box-shadow: var(--mosaic-elevation-menu);
+    inset-block-start: calc(100% + var(--mosaic-spacing-8));
+    inset-inline-start: 0;
+    max-block-size: 252px;
+    max-inline-size: calc(100vw - var(--mosaic-spacing-32));
+    overflow-y: auto;
+    padding: var(--mosaic-spacing-4);
+    position: absolute;
+    inline-size: 100%;
+    z-index: 20;
+  }
+  .mosaic-time-picker__option {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    display: block;
+    inline-size: 100%;
+    padding: var(--mosaic-spacing-8) var(--mosaic-spacing-12);
+    text-align: start;
+  }
+  .mosaic-time-picker__option:hover {
+    background: var(--mosaic-color-secondary-50);
+  }
+  .mosaic-time-picker__option[aria-selected='true'] {
+    background: var(--mosaic-color-primary-500);
+    color: var(--mosaic-color-neutral-background-off-white);
+  }
+  .mosaic-time-picker__option:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+}

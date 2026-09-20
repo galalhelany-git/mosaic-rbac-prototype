@@ -1,0 +1,51 @@
+@layer mosaic.components {
+  .mosaic-date-picker {
+    display: inline-block;
+    inline-size: min(284px, 100%);
+    max-inline-size: 100%;
+    position: relative;
+  }
+  .mosaic-date-picker__trigger {
+    align-items: center;
+    appearance: none;
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-neutral-border);
+    border-radius: var(--mosaic-measurement-abstract-8);
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--mosaic-typography-input-font-family);
+    font-size: var(--mosaic-typography-input-font-size);
+    gap: var(--mosaic-spacing-12);
+    inline-size: 100%;
+    justify-content: space-between;
+    min-block-size: var(--mosaic-spacing-48);
+    padding: 10px var(--mosaic-spacing-12);
+    text-align: start;
+  }
+  .mosaic-date-picker__trigger svg {
+    block-size: var(--mosaic-spacing-24);
+    flex: none;
+    inline-size: var(--mosaic-spacing-24);
+  }
+  .mosaic-date-picker__trigger:focus-visible {
+    border-color: var(--mosaic-color-secondary-500);
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-date-picker__trigger:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+  .mosaic-date-picker__placeholder {
+    color: var(--mosaic-color-neutral-text-secondary);
+  }
+  .mosaic-date-picker__popover {
+    inset-block-start: calc(100% + var(--mosaic-spacing-8));
+    inset-inline-start: 0;
+    max-inline-size: calc(100vw - var(--mosaic-spacing-32));
+    overflow-x: auto;
+    position: absolute;
+    z-index: 20;
+  }
+}

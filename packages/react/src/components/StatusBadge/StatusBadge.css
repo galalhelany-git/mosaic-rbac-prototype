@@ -1,0 +1,35 @@
+@layer mosaic.components {
+  .mosaic-status-badge {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    color: var(--mosaic-color-neutral-background-off-white);
+    display: inline-flex;
+    font-family: var(--mosaic-typography-caption-font-family);
+    font-size: var(--mosaic-typography-caption-font-size);
+    font-weight: var(--mosaic-typography-caption-font-weight);
+    justify-content: center;
+    line-height: var(--mosaic-typography-caption-line-height);
+    min-block-size: 20px;
+    padding-block: 1px;
+    padding-inline: 9px;
+    white-space: nowrap;
+  }
+  .mosaic-status-badge--active {
+    background: var(--mosaic-color-secondary-500);
+  }
+  .mosaic-status-badge--inactive {
+    background: var(--mosaic-color-neutral-background-off-white);
+    border-color: var(--mosaic-color-neutral-border);
+    color: var(--mosaic-color-neutral-text-secondary);
+  }
+  .mosaic-status-badge--pending {
+    background: var(--mosaic-color-status-info);
+  }
+  .mosaic-status-badge--suspended {
+    background: var(--mosaic-color-status-error);
+  }
+  .mosaic-status-badge--expired {
+    background: var(--mosaic-color-status-warning);
+  }
+}

@@ -1,0 +1,53 @@
+@layer mosaic.components {
+  .mosaic-radio {
+    align-items: center;
+    color: var(--mosaic-color-neutral-text-primary);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--mosaic-typography-button-font-family);
+    font-size: var(--mosaic-typography-button-font-size);
+    gap: var(--mosaic-spacing-8);
+    line-height: var(--mosaic-typography-button-line-height);
+    position: relative;
+  }
+  .mosaic-radio__input {
+    block-size: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+  .mosaic-radio__mark {
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-secondary-500);
+    border-radius: 50%;
+    block-size: 16px;
+    display: inline-grid;
+    flex: 0 0 16px;
+    inline-size: 16px;
+    place-items: center;
+  }
+  .mosaic-radio__mark::after {
+    background: var(--mosaic-color-neutral-background-white);
+    border-radius: 50%;
+    block-size: 6px;
+    content: '';
+    inline-size: 6px;
+    opacity: 0;
+  }
+  .mosaic-radio__input:checked + .mosaic-radio__mark {
+    background: var(--mosaic-color-secondary-500);
+  }
+  .mosaic-radio__input:checked + .mosaic-radio__mark::after {
+    opacity: 1;
+  }
+  .mosaic-radio__input:focus-visible + .mosaic-radio__mark {
+    box-shadow: var(--mosaic-elevation-focus);
+  }
+  .mosaic-radio--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

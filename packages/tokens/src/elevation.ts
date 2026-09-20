@@ -1,0 +1,198 @@
+import type { ShadowLayer } from './types';
+
+export const elevationTokens = {
+  focus: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(16, 185, 129, 0.08)',
+      offsetX: 0,
+      offsetY: 0,
+      blur: 1,
+      spread: 3,
+    },
+    { type: 'inner-shadow', color: '#b5e9d8', offsetX: 0, offsetY: 0, blur: 0, spread: 1 },
+  ],
+  focusError: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(248, 109, 109, 0.51)',
+      offsetX: 0,
+      offsetY: 0,
+      blur: 1,
+      spread: 3,
+    },
+    { type: 'inner-shadow', color: '#dc2626', offsetX: 0, offsetY: 0, blur: 0, spread: 1 },
+  ],
+  depth4: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.13)',
+      offsetX: 0,
+      offsetY: 1.6,
+      blur: 3.6,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.10)',
+      offsetX: 0,
+      offsetY: 0.3,
+      blur: 0.9,
+      spread: 0,
+    },
+  ],
+  depth8: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.13)',
+      offsetX: 0,
+      offsetY: 3.2,
+      blur: 7.2,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.10)',
+      offsetX: 0,
+      offsetY: 0.6,
+      blur: 1.8,
+      spread: 0,
+    },
+  ],
+  depth16: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.13)',
+      offsetX: 0,
+      offsetY: 6.4,
+      blur: 14.4,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.10)',
+      offsetX: 0,
+      offsetY: 1.2,
+      blur: 3.6,
+      spread: 0,
+    },
+  ],
+  depth64: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.22)',
+      offsetX: 0,
+      offsetY: 25.6,
+      blur: 57.6,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.18)',
+      offsetX: 0,
+      offsetY: 4.8,
+      blur: 14.4,
+      spread: 0,
+    },
+  ],
+  menu: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.10)',
+      offsetX: 0,
+      offsetY: 2,
+      blur: 4,
+      spread: -2,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.10)',
+      offsetX: 0,
+      offsetY: 4,
+      blur: 6,
+      spread: -1,
+    },
+  ],
+  light4: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.40)',
+      offsetX: 0,
+      offsetY: 0,
+      blur: 1,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.16)',
+      offsetX: 0,
+      offsetY: 6,
+      blur: 6,
+      spread: -6,
+    },
+  ],
+  light8: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.40)',
+      offsetX: 0,
+      offsetY: 0,
+      blur: 1,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.16)',
+      offsetX: 0,
+      offsetY: 12,
+      blur: 12,
+      spread: -6,
+    },
+  ],
+  light16: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.40)',
+      offsetX: 0,
+      offsetY: 0,
+      blur: 1,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.16)',
+      offsetX: 0,
+      offsetY: 8,
+      blur: 24,
+      spread: -6,
+    },
+  ],
+  light32: [
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.20)',
+      offsetX: 0,
+      offsetY: 0,
+      blur: 1,
+      spread: 0,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.12)',
+      offsetX: 0,
+      offsetY: 0,
+      blur: 32,
+      spread: -8,
+    },
+    {
+      type: 'drop-shadow',
+      color: 'rgba(0, 0, 0, 0.08)',
+      offsetX: 0,
+      offsetY: 32,
+      blur: 32,
+      spread: -8,
+    },
+  ],
+} as const satisfies Record<string, readonly ShadowLayer[]>;
+
+export type ElevationTokenName = keyof typeof elevationTokens;

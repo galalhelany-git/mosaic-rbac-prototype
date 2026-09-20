@@ -1,0 +1,41 @@
+@layer mosaic.components {
+  .mosaic-dashboard-toggle {
+    align-items: center;
+    background: var(--mosaic-color-secondary-50);
+    border-radius: var(--mosaic-measurement-abstract-8);
+    display: inline-flex;
+    gap: var(--mosaic-spacing-4);
+    max-inline-size: 100%;
+    overflow-x: auto;
+    padding: var(--mosaic-spacing-4);
+  }
+  .mosaic-dashboard-toggle__option {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
+    color: var(--mosaic-color-primary-100);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--mosaic-typography-button-font-family);
+    font-size: var(--mosaic-typography-button-font-size);
+    gap: var(--mosaic-spacing-8);
+    min-block-size: 43px;
+    padding: var(--mosaic-spacing-8) var(--mosaic-spacing-12);
+  }
+  .mosaic-dashboard-toggle__option[aria-checked='true'] {
+    background: var(--mosaic-color-neutral-background-white);
+    box-shadow: var(--mosaic-elevation-depth4);
+    color: var(--mosaic-color-primary-500);
+  }
+  .mosaic-dashboard-toggle__option:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-dashboard-toggle__icon,
+  .mosaic-dashboard-toggle__icon > * {
+    block-size: var(--mosaic-spacing-24);
+    inline-size: var(--mosaic-spacing-24);
+  }
+}

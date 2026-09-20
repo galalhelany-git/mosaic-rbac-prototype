@@ -1,0 +1,29 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "source": {
+    "fileKey": "Ey0gHNOBazFph9cdmuI3NI",
+    "fileName": "Mosaic Design System",
+    "auditedAt": "2026-09-13",
+    "node": "7:9"
+  },
+  "counts": {
+    "pages": 19,
+    "populatedPages": 16,
+    "componentSets": 52,
+    "standaloneComponents": 7,
+    "variantComponents": 667,
+    "localVariables": 42,
+    "paintStyles": 30,
+    "textStyles": 11,
+    "effectStyles": 11,
+    "gridStyles": 9
+  },
+  "limitations": [
+    "No semantic token layer",
+    "No dark mode",
+    "No RTL mode",
+    "No code syntax mappings",
+    "Components reference external variable collections",
+    "Four cursor component sets contain pre-existing variant errors"
+  ]
+}

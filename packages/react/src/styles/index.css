@@ -1,0 +1,96 @@
+@import '@mosaic-ds/tokens/tokens.css';
+@import '../components/Accordion/Accordion.css';
+@import '../components/Avatar/Avatar.css';
+@import '../components/Badge/Badge.css';
+@import '../components/Button/Button.css';
+@import '../components/ButtonGroup/ButtonGroup.css';
+@import '../components/Breadcrumb/Breadcrumb.css';
+@import '../components/Calendar/Calendar.css';
+@import '../components/Checkbox/Checkbox.css';
+@import '../components/CloseButton/CloseButton.css';
+@import '../components/Divider/Divider.css';
+@import '../components/DashboardToggle/DashboardToggle.css';
+@import '../components/DatePicker/DatePicker.css';
+@import '../components/Dialog/Dialog.css';
+@import '../components/FileUploader/FileUploader.css';
+@import '../components/IconButton/IconButton.css';
+@import '../components/Input/Input.css';
+@import '../components/Progress/Progress.css';
+@import '../components/Pagination/Pagination.css';
+@import '../components/Radio/Radio.css';
+@import '../components/SearchField/SearchField.css';
+@import '../components/RoleBadge/RoleBadge.css';
+@import '../components/Select/Select.css';
+@import '../components/Sidebar/Sidebar.css';
+@import '../components/StatusBadge/StatusBadge.css';
+@import '../components/Switch/Switch.css';
+@import '../components/Tabs/Tabs.css';
+@import '../components/Textarea/Textarea.css';
+@import '../components/TimePicker/TimePicker.css';
+@import '../components/Toast/Toast.css';
+@import '../components/Tooltip/Tooltip.css';
+@import '../components/TopNavigation/TopNavigation.css';
+
+@layer mosaic.reset, mosaic.tokens, mosaic.foundations, mosaic.components, mosaic.utilities;
+
+@layer mosaic.foundations {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :where([data-mosaic-root]) {
+    color: var(--mosaic-color-neutral-text-primary);
+    font-family: var(--mosaic-typography-body-base-font-family), sans-serif;
+    line-height: 1.5;
+    text-align: start;
+  }
+
+  :where([data-mosaic-root]) button,
+  :where([data-mosaic-root]) input,
+  :where([data-mosaic-root]) select,
+  :where([data-mosaic-root]) textarea {
+    font: inherit;
+  }
+}
+
+@layer mosaic.utilities {
+  .mosaic-visually-hidden {
+    block-size: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where([data-mosaic-root]) *,
+  :where([data-mosaic-root]) *::before,
+  :where([data-mosaic-root]) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :where([data-mosaic-root]) :focus-visible {
+    outline: 2px solid CanvasText !important;
+    outline-offset: 2px;
+  }
+
+  :where([data-mosaic-root]) button,
+  :where([data-mosaic-root]) input,
+  :where([data-mosaic-root]) select,
+  :where([data-mosaic-root]) textarea,
+  :where([data-mosaic-root]) [role='button'],
+  :where([data-mosaic-root]) [role='tab'],
+  :where([data-mosaic-root]) [role='radio'] {
+    forced-color-adjust: auto;
+  }
+}

@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="System/shield-bolt" clip-path="url(#clip0_0_216)">
+<path id="Vector" d="M3.3355 5.1415C3.2265 5.184 3.1145 5.22025 3 5.25C2.6108 5.14905 2.24587 4.97089 1.92689 4.72612C1.6079 4.48135 1.34138 4.17495 1.14315 3.82513C0.94492 3.47532 0.819033 3.08922 0.772969 2.6898C0.726904 2.29037 0.761602 1.88575 0.875 1.5C1.65388 1.53564 2.41604 1.26664 3 0.75C3.58396 1.26664 4.34612 1.53564 5.125 1.5C5.27669 2.01615 5.28679 2.5636 5.15425 3.085M4.75 4L4.25 4.75H5.25L4.75 5.5" stroke="#1E3A8A" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_0_216">
+<rect width="6" height="6" fill="white"/>
+</clipPath>
+</defs>
+</svg>

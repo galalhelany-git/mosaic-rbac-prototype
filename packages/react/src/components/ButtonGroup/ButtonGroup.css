@@ -1,0 +1,33 @@
+@layer mosaic.components {
+  .mosaic-button-group {
+    display: inline-flex;
+    max-inline-size: 100%;
+    overflow-x: auto;
+  }
+  .mosaic-button-group--vertical {
+    flex-direction: column;
+  }
+  .mosaic-button-group__item {
+    border-radius: 0;
+    position: relative;
+  }
+  .mosaic-button-group--horizontal > .mosaic-button-group__item:first-child {
+    border-end-start-radius: var(--mosaic-measurement-abstract-8);
+    border-start-start-radius: var(--mosaic-measurement-abstract-8);
+  }
+  .mosaic-button-group--horizontal > .mosaic-button-group__item:last-child {
+    border-end-end-radius: var(--mosaic-measurement-abstract-8);
+    border-start-end-radius: var(--mosaic-measurement-abstract-8);
+  }
+  .mosaic-button-group--vertical > .mosaic-button-group__item:first-child {
+    border-start-end-radius: var(--mosaic-measurement-abstract-8);
+    border-start-start-radius: var(--mosaic-measurement-abstract-8);
+  }
+  .mosaic-button-group--vertical > .mosaic-button-group__item:last-child {
+    border-end-end-radius: var(--mosaic-measurement-abstract-8);
+    border-end-start-radius: var(--mosaic-measurement-abstract-8);
+  }
+  .mosaic-button-group__item:focus-visible {
+    z-index: 1;
+  }
+}

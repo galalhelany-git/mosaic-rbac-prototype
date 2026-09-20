@@ -1,0 +1,57 @@
+@layer mosaic.components {
+  .mosaic-search-field {
+    align-items: center;
+    background: var(--mosaic-color-neutral-background-off-white);
+    border-block-end: 1px solid var(--mosaic-color-primary-50);
+    border-radius: var(--mosaic-measurement-abstract-8);
+    display: flex;
+    gap: var(--mosaic-spacing-8);
+    inline-size: min(100%, 300px);
+    min-block-size: 44px;
+    padding-block: 10px;
+    padding-inline: var(--mosaic-spacing-12);
+  }
+  .mosaic-search-field:focus-within {
+    background: var(--mosaic-color-neutral-background-white);
+    box-shadow: var(--mosaic-elevation-focus);
+  }
+  .mosaic-search-field__control {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--mosaic-color-primary-500);
+    flex: 1 1 auto;
+    font-family: var(--mosaic-typography-caption-font-family);
+    font-size: var(--mosaic-typography-caption-font-size);
+    font-weight: var(--mosaic-typography-caption-font-weight);
+    inline-size: 100%;
+    line-height: var(--mosaic-typography-caption-line-height);
+    min-inline-size: 0;
+    outline: 0;
+    padding: 0;
+  }
+  .mosaic-search-field__control::-webkit-search-cancel-button {
+    display: none;
+  }
+  .mosaic-search-field__control::placeholder {
+    color: color-mix(in srgb, var(--mosaic-color-neutral-text-primary) 50%, transparent);
+    opacity: 1;
+  }
+  .mosaic-search-field__icon {
+    align-items: center;
+    background: var(--mosaic-color-secondary-50);
+    border-radius: 3px;
+    color: var(--mosaic-color-secondary-800);
+    display: inline-flex;
+    flex: 0 0 24px;
+    justify-content: center;
+    padding: var(--mosaic-spacing-4);
+  }
+  .mosaic-search-field__icon img {
+    block-size: 13px;
+    inline-size: 13px;
+  }
+  .mosaic-search-field--disabled {
+    opacity: 0.6;
+  }
+}

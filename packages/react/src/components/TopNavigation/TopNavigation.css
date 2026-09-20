@@ -1,0 +1,34 @@
+@layer mosaic.components {
+  .mosaic-top-navigation {
+    align-items: center;
+    background: var(--mosaic-color-neutral-background-white);
+    border-block-end: 1px solid var(--mosaic-color-neutral-border);
+    box-shadow: var(--mosaic-elevation-light4);
+    color: var(--mosaic-color-primary-500);
+    display: flex;
+    gap: var(--mosaic-spacing-24);
+    inline-size: 100%;
+    min-block-size: var(--mosaic-spacing-48);
+    overflow-x: auto;
+    padding-inline: var(--mosaic-spacing-16);
+  }
+  .mosaic-top-navigation__brand {
+    align-items: center;
+    display: flex;
+    flex: none;
+  }
+  .mosaic-top-navigation__nav {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: var(--mosaic-spacing-8);
+    min-inline-size: max-content;
+  }
+  .mosaic-top-navigation__actions {
+    align-items: center;
+    display: flex;
+    gap: var(--mosaic-spacing-8);
+    margin-inline-start: auto;
+    min-inline-size: max-content;
+  }
+}

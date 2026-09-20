@@ -1,0 +1,109 @@
+@layer mosaic.components {
+  .mosaic-icon-button {
+    align-items: center;
+    appearance: none;
+    background: var(--mosaic-color-neutral-background-off-white);
+    border: 0;
+    border-radius: var(--mosaic-measurement-abstract-8);
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    transition:
+      background-color 120ms ease,
+      box-shadow 120ms ease;
+  }
+
+  .mosaic-icon-button:hover:not(:disabled) {
+    background: var(--mosaic-color-neutral-gray);
+  }
+
+  .mosaic-icon-button:active:not(:disabled) {
+    background: var(--mosaic-color-primary-50);
+    box-shadow: inset 0 0 0 1px var(--mosaic-color-status-warning);
+  }
+
+  .mosaic-icon-button:focus-visible {
+    background: var(--mosaic-color-primary-50);
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+
+  .mosaic-icon-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  .mosaic-icon-button--lg {
+    block-size: 42px;
+    inline-size: 42px;
+  }
+  .mosaic-icon-button--md {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+  .mosaic-icon-button--sm {
+    block-size: 20px;
+    inline-size: 20px;
+  }
+
+  .mosaic-icon-button__icon,
+  .mosaic-icon-button__icon > * {
+    block-size: 58%;
+    display: block;
+    inline-size: 58%;
+  }
+
+  .mosaic-icon-button__icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .mosaic-icon-button__spinner {
+    animation: mosaic-spin 700ms linear infinite;
+    border: 2px solid var(--mosaic-color-primary-100);
+    border-block-start-color: var(--mosaic-color-primary-500);
+    border-radius: 50%;
+  }
+
+  .mosaic-icon-button__notification {
+    align-items: center;
+    background: var(--mosaic-color-secondary-500);
+    border: 1px solid var(--mosaic-color-neutral-background-white);
+    border-radius: 999px;
+    color: var(--mosaic-color-neutral-background-white);
+    display: inline-flex;
+    font-family: var(--mosaic-typography-input-font-family);
+    font-size: 10px;
+    font-weight: 700;
+    inset-block-start: -4px;
+    inset-inline-end: -4px;
+    justify-content: center;
+    line-height: 1;
+    min-block-size: 16px;
+    min-inline-size: 16px;
+    padding-inline: 3px;
+    position: absolute;
+  }
+
+  .mosaic-icon-button--sm .mosaic-icon-button__notification {
+    font-size: 8px;
+    min-block-size: 12px;
+    min-inline-size: 12px;
+  }
+
+  @keyframes mosaic-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mosaic-icon-button__spinner {
+      animation-duration: 1400ms;
+    }
+  }
+}

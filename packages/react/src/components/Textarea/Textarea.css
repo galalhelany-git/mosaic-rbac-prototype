@@ -1,0 +1,29 @@
+@layer mosaic.components {
+  .mosaic-textarea__control {
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-primary-50);
+    border-radius: var(--mosaic-measurement-abstract-8);
+    color: var(--mosaic-color-neutral-text-primary);
+    display: block;
+    font-family: var(--mosaic-typography-input-font-family);
+    font-size: var(--mosaic-typography-input-font-size);
+    font-weight: var(--mosaic-typography-input-font-weight);
+    inline-size: 100%;
+    line-height: var(--mosaic-typography-input-line-height);
+    min-block-size: 80px;
+    outline: none;
+    padding-block: 10px;
+    padding-inline: var(--mosaic-spacing-12);
+    resize: vertical;
+  }
+  .mosaic-textarea__control::placeholder {
+    color: var(--mosaic-color-primary-200);
+    opacity: 1;
+  }
+  .mosaic-textarea__control:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+  }
+  .mosaic-field--invalid .mosaic-textarea__control:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus-error);
+  }
+}

@@ -1,0 +1,106 @@
+@layer mosaic.components {
+  .mosaic-avatar {
+    align-items: center;
+    background: var(--mosaic-color-primary-500);
+    color: var(--mosaic-color-primary-50);
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-family: var(--mosaic-typography-display-font-family);
+    font-weight: 700;
+    justify-content: center;
+    position: relative;
+  }
+  .mosaic-avatar--xs {
+    block-size: 24px;
+    font-size: 10px;
+    inline-size: 24px;
+  }
+  .mosaic-avatar--sm {
+    block-size: 38px;
+    font-size: 14px;
+    inline-size: 38px;
+  }
+  .mosaic-avatar--md {
+    block-size: 42px;
+    font-size: 16px;
+    inline-size: 42px;
+  }
+  .mosaic-avatar--lg {
+    block-size: 52px;
+    font-size: 20px;
+    inline-size: 52px;
+  }
+  .mosaic-avatar--xl {
+    block-size: 80px;
+    font-size: 30px;
+    inline-size: 80px;
+  }
+  .mosaic-avatar--square {
+    border-radius: 0;
+  }
+  .mosaic-avatar--rounded {
+    border-radius: var(--mosaic-measurement-abstract-8);
+  }
+  .mosaic-avatar--circle {
+    border-radius: 50%;
+  }
+  .mosaic-avatar[tabindex]:hover:not(.mosaic-avatar--disabled) {
+    box-shadow: var(--mosaic-elevation-depth16);
+  }
+  .mosaic-avatar:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus-error);
+    outline: none;
+  }
+  .mosaic-avatar[tabindex]:active:not(.mosaic-avatar--disabled) {
+    background: var(--mosaic-color-primary-700);
+    box-shadow: var(--mosaic-elevation-depth8);
+  }
+  .mosaic-avatar--disabled {
+    background: var(--mosaic-color-neutral-gray);
+    color: var(--mosaic-color-primary-200);
+    opacity: 0.75;
+  }
+  .mosaic-avatar__image {
+    block-size: 100%;
+    border-radius: inherit;
+    display: block;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+  .mosaic-avatar__initials {
+    line-height: 1.2;
+  }
+  .mosaic-avatar__status {
+    block-size: 34.6%;
+    border: 2px solid var(--mosaic-color-neutral-background-white);
+    border-radius: 50%;
+    inset-block-end: 0;
+    inset-inline-end: -4%;
+    inline-size: 34.6%;
+    position: absolute;
+  }
+  .mosaic-avatar__status--online {
+    background: var(--mosaic-color-secondary-500);
+  }
+  .mosaic-avatar__status--offline {
+    background: var(--mosaic-color-neutral-text-secondary);
+  }
+  .mosaic-avatar__role {
+    align-items: center;
+    background: var(--mosaic-color-neutral-background-white);
+    border-radius: 50%;
+    block-size: 38%;
+    box-shadow: var(--mosaic-elevation-depth4);
+    color: var(--mosaic-color-primary-500);
+    display: inline-flex;
+    inset-block-end: 0;
+    inset-inline-start: 62%;
+    inline-size: 38%;
+    justify-content: center;
+    position: absolute;
+  }
+  .mosaic-avatar__role > * {
+    block-size: 70%;
+    inline-size: 70%;
+  }
+}

@@ -1,0 +1,56 @@
+@layer mosaic.components {
+  .mosaic-badge {
+    align-items: center;
+    background: var(--mosaic-color-secondary-500);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--mosaic-color-neutral-background-white);
+    display: inline-flex;
+    font-family: var(--mosaic-typography-caption-font-family);
+    font-size: var(--mosaic-typography-caption-font-size);
+    font-weight: var(--mosaic-typography-caption-font-weight);
+    justify-content: center;
+    line-height: var(--mosaic-typography-caption-line-height);
+    min-block-size: 20px;
+    padding-block: 1px;
+    padding-inline: 9px;
+    white-space: nowrap;
+  }
+  .mosaic-badge--rounded {
+    border-radius: 999px;
+  }
+  .mosaic-badge--default:hover {
+    background: var(--mosaic-color-secondary-700);
+    box-shadow: var(--mosaic-elevation-depth4);
+  }
+  .mosaic-badge--default:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-badge--secondary {
+    background: var(--mosaic-color-secondary-50);
+    color: var(--mosaic-color-neutral-text-primary);
+  }
+  .mosaic-badge--outline {
+    background: transparent;
+    border-color: var(--mosaic-color-primary-50);
+    color: var(--mosaic-color-neutral-text-primary);
+  }
+  .mosaic-badge--secondary:focus-visible,
+  .mosaic-badge--outline:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    color: var(--mosaic-color-secondary-800);
+    outline: none;
+  }
+  .mosaic-badge--error {
+    background: var(--mosaic-color-status-error);
+  }
+  .mosaic-badge--error:hover {
+    box-shadow: var(--mosaic-elevation-depth4);
+    opacity: 0.8;
+  }
+  .mosaic-badge--error:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus-error);
+    outline: none;
+  }
+}

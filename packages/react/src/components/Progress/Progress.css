@@ -1,0 +1,26 @@
+@layer mosaic.components {
+  .mosaic-progress {
+    background: var(--mosaic-color-primary-50);
+    border-radius: 999px;
+    display: flex;
+    inline-size: min(100%, 400px);
+    overflow: hidden;
+  }
+  .mosaic-progress__value {
+    background: var(--mosaic-color-primary-500);
+    border-radius: inherit;
+    display: block;
+  }
+  .mosaic-progress--xs {
+    block-size: 4px;
+  }
+  .mosaic-progress--sm {
+    block-size: 8px;
+  }
+  .mosaic-progress--md {
+    block-size: 12px;
+  }
+  .mosaic-progress--lg {
+    block-size: 16px;
+  }
+}

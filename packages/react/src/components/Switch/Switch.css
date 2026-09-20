@@ -1,0 +1,83 @@
+@layer mosaic.components {
+  .mosaic-switch {
+    align-items: center;
+    color: var(--mosaic-color-neutral-text-primary);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--mosaic-typography-button-font-family);
+    font-size: var(--mosaic-typography-button-font-size);
+    gap: var(--mosaic-spacing-8);
+    position: relative;
+  }
+  .mosaic-switch__input {
+    block-size: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+  .mosaic-switch__track {
+    align-items: center;
+    background: var(--mosaic-color-neutral-border);
+    border-radius: 999px;
+    display: flex;
+    flex: 0 0 auto;
+    inline-size: 44px;
+    padding: 2px;
+    transition: background-color 120ms ease;
+  }
+  .mosaic-switch__thumb {
+    background: var(--mosaic-color-neutral-background-white);
+    border-radius: 50%;
+    block-size: 20px;
+    box-shadow: var(--mosaic-elevation-depth4);
+    display: block;
+    inline-size: 20px;
+    transition: transform 120ms ease;
+  }
+  .mosaic-switch__input:checked + .mosaic-switch__track,
+  .mosaic-switch__track[data-indeterminate='true'] {
+    background: var(--mosaic-color-secondary-500);
+  }
+  .mosaic-switch__input:checked + .mosaic-switch__track .mosaic-switch__thumb {
+    transform: translateX(20px);
+  }
+  [dir='rtl'] .mosaic-switch__input:checked + .mosaic-switch__track .mosaic-switch__thumb {
+    transform: translateX(-20px);
+  }
+  .mosaic-switch__track[data-indeterminate='true'] {
+    justify-content: center;
+  }
+  .mosaic-switch__track[data-indeterminate='true'] .mosaic-switch__thumb {
+    block-size: 8px;
+    border-radius: 4px;
+    inline-size: 24px;
+    transform: none;
+  }
+  .mosaic-switch__input:focus-visible + .mosaic-switch__track {
+    box-shadow: var(--mosaic-elevation-focus);
+  }
+  .mosaic-switch--sm .mosaic-switch__track {
+    inline-size: 36px;
+  }
+  .mosaic-switch--sm .mosaic-switch__thumb {
+    block-size: 16px;
+    inline-size: 16px;
+  }
+  .mosaic-switch--sm .mosaic-switch__input:checked + .mosaic-switch__track .mosaic-switch__thumb {
+    transform: translateX(16px);
+  }
+  [dir='rtl']
+    .mosaic-switch--sm
+    .mosaic-switch__input:checked
+    + .mosaic-switch__track
+    .mosaic-switch__thumb {
+    transform: translateX(-16px);
+  }
+  .mosaic-switch--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,52 @@
+@layer mosaic.components {
+  .mosaic-accordion {
+    border-block-end: 1px solid var(--mosaic-color-secondary-500);
+    color: var(--mosaic-color-primary-500);
+    inline-size: min(100%, 450px);
+  }
+  .mosaic-accordion__heading {
+    margin: 0;
+  }
+  .mosaic-accordion__trigger {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    font-family: var(--mosaic-typography-body-large-font-family);
+    font-size: var(--mosaic-typography-body-large-font-size);
+    font-weight: var(--mosaic-typography-body-large-font-weight);
+    inline-size: 100%;
+    justify-content: space-between;
+    line-height: var(--mosaic-typography-body-large-line-height);
+    padding: var(--mosaic-spacing-16) 0;
+    text-align: start;
+  }
+  .mosaic-accordion__trigger:hover span {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .mosaic-accordion__trigger:focus-visible {
+    border-radius: var(--mosaic-measurement-abstract-8);
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-accordion__trigger:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+  .mosaic-accordion__icon {
+    block-size: var(--mosaic-spacing-24);
+    flex: none;
+    inline-size: var(--mosaic-spacing-24);
+  }
+  .mosaic-accordion__panel {
+    color: var(--mosaic-color-neutral-text-secondary);
+    font-family: var(--mosaic-typography-body-base-font-family);
+    font-size: var(--mosaic-typography-body-base-font-size);
+    line-height: var(--mosaic-typography-body-base-line-height);
+    padding-block-end: var(--mosaic-spacing-16);
+  }
+}

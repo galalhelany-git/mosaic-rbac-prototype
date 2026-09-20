@@ -1,0 +1,59 @@
+@layer mosaic.components {
+  .mosaic-pagination {
+    align-items: center;
+    display: flex;
+    gap: var(--mosaic-spacing-4);
+    max-inline-size: 100%;
+    overflow-x: auto;
+  }
+  .mosaic-pagination__button {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--mosaic-color-primary-500);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--mosaic-typography-button-font-family);
+    font-size: var(--mosaic-typography-button-font-size);
+    justify-content: center;
+  }
+  .mosaic-pagination__button--page {
+    block-size: var(--mosaic-spacing-40);
+    border-radius: var(--mosaic-measurement-abstract-8);
+    inline-size: var(--mosaic-spacing-40);
+  }
+  .mosaic-pagination__button--direction {
+    block-size: var(--mosaic-spacing-40);
+    gap: var(--mosaic-spacing-8);
+    padding-inline: var(--mosaic-spacing-12);
+  }
+  .mosaic-pagination__ellipsis svg {
+    block-size: var(--mosaic-spacing-16);
+    inline-size: var(--mosaic-spacing-16);
+  }
+  .mosaic-pagination__button[aria-current='page'] {
+    background: var(--mosaic-color-neutral-background-white);
+    border-color: var(--mosaic-color-primary-50);
+    box-shadow: var(--mosaic-elevation-depth4);
+  }
+  .mosaic-pagination__button:hover:not(:disabled) {
+    background: var(--mosaic-color-primary-50);
+  }
+  .mosaic-pagination__button:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-pagination__button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+  .mosaic-pagination__ellipsis {
+    align-items: center;
+    block-size: var(--mosaic-spacing-40);
+    color: var(--mosaic-color-neutral-text-secondary);
+    display: inline-flex;
+    inline-size: var(--mosaic-spacing-40);
+    justify-content: center;
+  }
+}

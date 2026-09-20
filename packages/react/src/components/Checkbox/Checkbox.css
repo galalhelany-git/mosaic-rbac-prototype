@@ -1,0 +1,68 @@
+@layer mosaic.components {
+  .mosaic-choice {
+    align-items: center;
+    color: var(--mosaic-color-neutral-text-primary);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: var(--mosaic-typography-button-font-family);
+    font-size: var(--mosaic-typography-button-font-size);
+    gap: var(--mosaic-spacing-8);
+    line-height: var(--mosaic-typography-button-line-height);
+    position: relative;
+  }
+
+  .mosaic-choice__input {
+    block-size: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .mosaic-choice__box {
+    align-items: center;
+    background: var(--mosaic-color-neutral-background-white);
+    border: 1px solid var(--mosaic-color-secondary-500);
+    border-radius: var(--mosaic-spacing-4);
+    block-size: 16px;
+    color: var(--mosaic-color-neutral-background-white);
+    display: inline-flex;
+    flex: 0 0 16px;
+    inline-size: 16px;
+    justify-content: center;
+  }
+
+  .mosaic-choice__input:checked + .mosaic-choice__box,
+  .mosaic-choice__box[data-indeterminate='true'] {
+    background: var(--mosaic-color-secondary-500);
+  }
+
+  .mosaic-choice__check {
+    block-size: 14px;
+    display: none;
+    inline-size: 14px;
+  }
+  .mosaic-choice__input:checked + .mosaic-choice__box .mosaic-choice__check {
+    display: block;
+  }
+  .mosaic-choice__minus {
+    block-size: 14px;
+    display: none;
+    inline-size: 14px;
+  }
+  .mosaic-choice__box[data-indeterminate='true'] .mosaic-choice__check {
+    display: none;
+  }
+  .mosaic-choice__box[data-indeterminate='true'] .mosaic-choice__minus {
+    display: block;
+  }
+  .mosaic-choice__input:focus-visible + .mosaic-choice__box {
+    box-shadow: var(--mosaic-elevation-focus);
+  }
+  .mosaic-choice--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

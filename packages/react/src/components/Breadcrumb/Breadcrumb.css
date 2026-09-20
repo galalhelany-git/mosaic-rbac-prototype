@@ -1,0 +1,52 @@
+@layer mosaic.components {
+  .mosaic-breadcrumb__list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mosaic-spacing-8);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: anywhere;
+  }
+  .mosaic-breadcrumb__item {
+    align-items: center;
+    color: var(--mosaic-color-neutral-text-secondary);
+    display: inline-flex;
+    font-family: var(--mosaic-typography-caption-font-family);
+    font-size: var(--mosaic-typography-caption-font-size);
+    gap: var(--mosaic-spacing-8);
+    line-height: var(--mosaic-typography-caption-line-height);
+  }
+  .mosaic-breadcrumb a {
+    border-radius: 4px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .mosaic-breadcrumb a:hover {
+    color: var(--mosaic-color-primary-500);
+    text-decoration: underline;
+  }
+  .mosaic-breadcrumb a:focus-visible {
+    box-shadow: var(--mosaic-elevation-focus);
+    outline: none;
+  }
+  .mosaic-breadcrumb__current {
+    color: var(--mosaic-color-primary-500);
+    font-size: var(--mosaic-typography-body-base-font-size);
+  }
+  .mosaic-breadcrumb__separator {
+    block-size: var(--mosaic-spacing-16);
+    inline-size: var(--mosaic-spacing-16);
+  }
+  .mosaic-breadcrumb__ellipsis {
+    display: inline-flex;
+  }
+  .mosaic-breadcrumb__ellipsis svg {
+    block-size: var(--mosaic-spacing-16);
+    inline-size: var(--mosaic-spacing-16);
+  }
+  :where([dir='rtl']) .mosaic-breadcrumb__separator {
+    transform: scaleX(-1);
+  }
+}
